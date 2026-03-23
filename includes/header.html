@@ -1,107 +1,53 @@
-<!DOCTYPE html>
-<html lang="en-AU">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spot On Websites – Target. Convert. Scale.</title>
-  <meta name="description" content="Australian digital marketing agency building websites that actually generate leads for service businesses. 15 years experience, 900+ websites built.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Spot On Websites – Target. Convert. Scale.">
-  <meta property="og:description" content="Australian digital marketing agency building websites that actually generate leads for service businesses.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&fit=crop">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://spotonwebsites.com.au/">
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Spot On Websites",
-    "url": "https://spotonwebsites.com.au",
-    "logo": "https://spotonwebsites.com.au/wp-content/uploads/2025/10/Spot-On-LeadFlow-3.png",
-    "description": "Australian digital marketing agency specialising in website design, SEO, and Google Ads for service‑based businesses.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Shop 6001/19 Robina Town Centre Drive",
-      "addressLocality": "Robina",
-      "addressRegion": "QLD",
-      "postalCode": "4226",
-      "addressCountry": "AU"
-    },
-    "telephone": "+61756071263",
-    "email": "hello@spotonwebsites.com.au",
-    "openingHours": "Mo-Fr 09:00-17:00",
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.facebook.com/spotonwebsites",
-      "https://www.linkedin.com/company/spotonwebsites",
-      "https://www.instagram.com/spotonwebsites"
-    ]
-  }
-  </script>
-</head>
-<body>
-  <!-- Header Navigation (Glassmorphism) -->
-  <header class="header" id="header">
-    <div class="container header__container">
-      <a href="/" class="header__logo">
-        <img src="https://spotonwebsites.com.au/wp-content/uploads/2025/10/Spot-On-LeadFlow-3.png" alt="Spot On Websites" class="header__logo-img" width="160" height="40">
-        <span class="header__logo-text">Spot On</span>
-      </a>
+<!-- Header Navigation -->
+<header class="header" id="header">
+  <div class="container header__container">
+    <a href="index.html" class="header__logo">
+      <img src="https://spotonwebsites.com.au/wp-content/uploads/2025/10/Spot-On-LeadFlow-3.png" alt="Spot On Websites" class="header__logo-img" width="160" height="40">
+      <span class="header__logo-text">Spot On</span>
+    </a>
 
-      <nav class="header__nav">
-        <a href="/" class="header__nav-link">Home</a>
-        <a href="/about.html" class="header__nav-link">About</a>
-        <a href="/services.html" class="header__nav-link">Services</a>
-        <a href="/website-design.html" class="header__nav-link">Web Design</a>
-        <a href="/seo.html" class="header__nav-link">SEO</a>
-        <a href="/gold-coast.html" class="header__nav-link">Gold Coast</a>
-        <a href="/contact.html" class="header__nav-link">Contact</a>
-        <a href="/contact.html" class="header__cta">Get a Quote</a>
-      </nav>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html" class="header__nav-link">Home</a>
+      <a href="about.html" class="header__nav-link">About</a>
+      <a href="services.html" class="header__nav-link">Services</a>
+      <a href="contact.html" class="header__nav-link">Contact</a>
+      <a href="contact.html" class="header__cta">Get a Quote</a>
+    </nav>
 
-      <button class="header__hamburger" id="hamburger" aria-label="Open menu">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="drawer" id="drawer">
-    <button class="drawer__close" id="drawer-close" aria-label="Close menu">
+    <button class="header__hamburger" id="hamburger" aria-label="Open menu">
       <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </button>
-    <a href="/" class="drawer__link">Home</a>
-    <a href="/about.html" class="drawer__link">About</a>
-    <a href="/services.html" class="drawer__link">Services</a>
-    <a href="/website-design.html" class="drawer__link">Website Design</a>
-    <a href="/seo.html" class="drawer__link">SEO</a>
-    <a href="/google-ads.html" class="drawer__link">Google Ads</a>
-    <a href="/social-media-advertising.html" class="drawer__link">Social Media Ads</a>
-    <a href="/full-digital-marketing.html" class="drawer__link">Full Marketing</a>
-    <a href="/gold-coast.html" class="drawer__link">Gold Coast</a>
-    <a href="/brisbane.html" class="drawer__link">Brisbane</a>
-    <a href="/sunshine-coast.html" class="drawer__link">Sunshine Coast</a>
-    <a href="/sydney.html" class="drawer__link">Sydney</a>
-    <a href="/melbourne.html" class="drawer__link">Melbourne</a>
-    <a href="/perth.html" class="drawer__link">Perth</a>
-    <a href="/adelaide.html" class="drawer__link">Adelaide</a>
-    <a href="/contact.html" class="drawer__link">Contact</a>
-    <a href="/contact.html" class="drawer__cta">Get a Free Quote</a>
   </div>
-  <div class="overlay" id="overlay"></div>
+</header>
 
-  <!-- Hero section will be inserted by each page -->
-  <main>
+<!-- Mobile Drawer -->
+<div class="drawer" id="drawer">
+  <button class="drawer__close" id="drawer-close" aria-label="Close menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  <a href="index.html" class="drawer__link">Home</a>
+  <a href="about.html" class="drawer__link">About</a>
+  <a href="services.html" class="drawer__link">Services</a>
+  <a href="website-design.html" class="drawer__link">Website Design</a>
+  <a href="seo.html" class="drawer__link">SEO</a>
+  <a href="google-ads.html" class="drawer__link">Google Ads</a>
+  <a href="social-media-advertising.html" class="drawer__link">Social Media Ads</a>
+  <a href="full-digital-marketing.html" class="drawer__link">Full Marketing</a>
+  <a href="gold-coast.html" class="drawer__link">Gold Coast</a>
+  <a href="brisbane.html" class="drawer__link">Brisbane</a>
+  <a href="sunshine-coast.html" class="drawer__link">Sunshine Coast</a>
+  <a href="sydney.html" class="drawer__link">Sydney</a>
+  <a href="melbourne.html" class="drawer__link">Melbourne</a>
+  <a href="perth.html" class="drawer__link">Perth</a>
+  <a href="adelaide.html" class="drawer__link">Adelaide</a>
+  <a href="contact.html" class="drawer__link">Contact</a>
+  <a href="contact.html" class="drawer__cta">Get a Free Quote</a>
+</div>
+<div class="overlay" id="overlay"></div>

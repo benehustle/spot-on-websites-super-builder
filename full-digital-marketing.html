@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
 <head>
   <meta charset="UTF-8">
@@ -8,84 +8,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container header__container">
-      <a href="/" class="header__logo">
-        <img src="https://spotonwebsites.com.au/wp-content/uploads/2025/10/Spot-On-LeadFlow-3.png" alt="Spot On Websites" class="header__logo-img" width="160" height="40">
-        <span class="header__logo-text">Spot On</span>
-      </a>
+  <a href="#main" class="sr-only">Skip to main content</a>
 
-      <nav class="header__nav">
-        <a href="/" class="header__nav-link">Home</a>
-        <a href="/about.html" class="header__nav-link">About</a>
-        <a href="/services.html" class="header__nav-link">Services</a>
-        <a href="/website-design.html" class="header__nav-link">Web Design</a>
-        <a href="/seo.html" class="header__nav-link">SEO</a>
-        <a href="/gold-coast.html" class="header__nav-link">Gold Coast</a>
-        <a href="/contact.html" class="header__nav-link">Contact</a>
-        <a href="/contact.html" class="header__cta">Get a Quote</a>
-      </nav>
+  <div id="header-placeholder"></div>
 
-      <button class="header__hamburger" id="hamburger" aria-label="Open menu">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-  </header>
 
-  <!-- Mobile Drawer -->
-  <div class="drawer" id="drawer">
-    <button class="drawer__close" id="drawer-close" aria-label="Close menu">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-    <a href="/" class="drawer__link">Home</a>
-    <a href="/about.html" class="drawer__link">About</a>
-    <a href="/services.html" class="drawer__link">Services</a>
-    <a href="/website-design.html" class="drawer__link">Website Design</a>
-    <a href="/seo.html" class="drawer__link">SEO</a>
-    <a href="/google-ads.html" class="drawer__link">Google Ads</a>
-    <a href="/social-media-advertising.html" class="drawer__link">Social Media Ads</a>
-    <a href="/full-digital-marketing.html" class="drawer__link">Full Marketing</a>
-    <a href="/gold-coast.html" class="drawer__link">Gold Coast</a>
-    <a href="/brisbane.html" class="drawer__link">Brisbane</a>
-    <a href="/sunshine-coast.html" class="drawer__link">Sunshine Coast</a>
-    <a href="/sydney.html" class="drawer__link">Sydney</a>
-    <a href="/melbourne.html" class="drawer__link">Melbourne</a>
-    <a href="/perth.html" class="drawer__link">Perth</a>
-    <a href="/adelaide.html" class="drawer__link">Adelaide</a>
-    <a href="/contact.html" class="drawer__link">Contact</a>
-    <a href="/contact.html" class="drawer__cta">Get a Free Quote</a>
-  </div>
-  <div class="overlay" id="overlay"></div>
-
-  <main>
+  <main id="main">
     <!-- Hero Page -->
     <section class="hero hero--page">
-      <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&fit=crop');"></div>
-      <div class="hero__overlay"></div>
+      <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&fit=crop');" role="img" aria-label="Full digital marketing"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
       <div class="container hero__content">
         <h1 class="hero__headline">Full Digital <span class="gradient-text">Marketing</span></h1>
         <p class="hero__subheadline">A complete, integrated marketing strategy that combines website design, SEO, paid ads, and content marketing. We act as your outsourced marketing department.</p>
       </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+          <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+        </svg>
+      </div>
     </section>
-
-    <!-- Wave Divider -->
-    <div class="wave-divider wave-divider--white">
-      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/>
-      </svg>
-    </div>
 
     <!-- Service Detail -->
     <section class="section">
@@ -152,74 +98,8 @@
       </div>
     </section>
   </main>
+  <div id="footer-placeholder"></div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 48px;">
-        <!-- Column 1: Brand -->
-        <div>
-          <img src="https://spotonwebsites.com.au/wp-content/uploads/2025/10/Spot-On-LeadFlow-3.png" alt="Spot On Websites" class="footer__logo" width="160" height="40">
-          <p class="footer__tagline">Australian digital marketing agency building websites that actually generate leads for service businesses.</p>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            <span>hello@spotonwebsites.com.au</span>
-          </div>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-            </svg>
-            <span>(07) 5607 1263</span>
-          </div>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-            </svg>
-            <span>Shop 6001/19 Robina Town Centre Drive, Robina QLD 4226</span>
-          </div>
-        </div>
-
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h3 class="footer__heading">Services</h3>
-          <a href="/website-design.html" class="footer__link">Website Design</a>
-          <a href="/seo.html" class="footer__link">SEO</a>
-          <a href="/google-ads.html" class="footer__link">Google Ads</a>
-          <a href="/social-media-advertising.html" class="footer__link">Social Media Advertising</a>
-          <a href="/full-digital-marketing.html" class="footer__link">Full Digital Marketing</a>
-        </div>
-
-        <!-- Column 3: Service Areas -->
-        <div>
-          <h3 class="footer__heading">Service Areas</h3>
-          <a href="/gold-coast.html" class="footer__link">Gold Coast</a>
-          <a href="/brisbane.html" class="footer__link">Brisbane</a>
-          <a href="/sunshine-coast.html" class="footer__link">Sunshine Coast</a>
-          <a href="/sydney.html" class="footer__link">Sydney</a>
-          <a href="/melbourne.html" class="footer__link">Melbourne</a>
-          <a href="/perth.html" class="footer__link">Perth</a>
-          <a href="/adelaide.html" class="footer__link">Adelaide</a>
-        </div>
-
-        <!-- Column 4: Company -->
-        <div>
-          <h3 class="footer__heading">Company</h3>
-          <a href="/about.html" class="footer__link">About Us</a>
-          <a href="/services.html" class="footer__link">All Services</a>
-          <a href="/contact.html" class="footer__link">Contact</a>
-          <a href="/privacy.html" class="footer__link">Privacy Policy</a>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <p>&copy; 2010–2026 Spot On Websites. All rights reserved. ABN 123 456 789.</p>
-        <p>Website built by Spot On Websites — an Australian digital marketing agency.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/assets/script.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>

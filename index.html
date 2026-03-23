@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
 <head>
   <meta charset="UTF-8">
@@ -8,68 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 </head>
 <body>
-  <!-- Header Navigation (Glassmorphism) -->
-  <header class="header" id="header">
-    <div class="container header__container">
-      <a href="/" class="header__logo">
-        <img src="https://spotonwebsites.com.au/wp-content/uploads/2025/10/Spot-On-LeadFlow-3.png" alt="Spot On Websites" class="header__logo-img" width="160" height="40">
-        <span class="header__logo-text">Spot On</span>
-      </a>
+  <a href="#main" class="sr-only">Skip to main content</a>
 
-      <nav class="header__nav">
-        <a href="/" class="header__nav-link">Home</a>
-        <a href="/about.html" class="header__nav-link">About</a>
-        <a href="/services.html" class="header__nav-link">Services</a>
-        <a href="/website-design.html" class="header__nav-link">Web Design</a>
-        <a href="/seo.html" class="header__nav-link">SEO</a>
-        <a href="/gold-coast.html" class="header__nav-link">Gold Coast</a>
-        <a href="/contact.html" class="header__nav-link">Contact</a>
-        <a href="/contact.html" class="header__cta">Get a Quote</a>
-      </nav>
+  <div id="header-placeholder"></div>
 
-      <button class="header__hamburger" id="hamburger" aria-label="Open menu">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-  </header>
 
-  <!-- Mobile Drawer -->
-  <div class="drawer" id="drawer">
-    <button class="drawer__close" id="drawer-close" aria-label="Close menu">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-    <a href="/" class="drawer__link">Home</a>
-    <a href="/about.html" class="drawer__link">About</a>
-    <a href="/services.html" class="drawer__link">Services</a>
-    <a href="/website-design.html" class="drawer__link">Website Design</a>
-    <a href="/seo.html" class="drawer__link">SEO</a>
-    <a href="/google-ads.html" class="drawer__link">Google Ads</a>
-    <a href="/social-media-advertising.html" class="drawer__link">Social Media Ads</a>
-    <a href="/full-digital-marketing.html" class="drawer__link">Full Marketing</a>
-    <a href="/gold-coast.html" class="drawer__link">Gold Coast</a>
-    <a href="/brisbane.html" class="drawer__link">Brisbane</a>
-    <a href="/sunshine-coast.html" class="drawer__link">Sunshine Coast</a>
-    <a href="/sydney.html" class="drawer__link">Sydney</a>
-    <a href="/melbourne.html" class="drawer__link">Melbourne</a>
-    <a href="/perth.html" class="drawer__link">Perth</a>
-    <a href="/adelaide.html" class="drawer__link">Adelaide</a>
-    <a href="/contact.html" class="drawer__link">Contact</a>
-    <a href="/contact.html" class="drawer__cta">Get a Free Quote</a>
-  </div>
-  <div class="overlay" id="overlay"></div>
-
-  <main>
+  <main id="main">
     <!-- Hero (Dark) -->
     <section class="hero">
       <div class="hero__bg"></div>
@@ -79,21 +27,23 @@
         <h1 class="hero__headline"><span class="gradient-text">Target.</span> Convert. Scale.</h1>
         <p class="hero__subheadline">We build websites that actually generate leads for Australian service businesses. No fluff. No guesswork. Just measurable results.</p>
         <div class="hero__cta-group">
-          <a href="/contact.html" class="btn btn--primary">Get a Free Strategy Call</a>
-          <a href="/services.html" class="btn btn--secondary">View Our Services</a>
+          <a href="/contact.html" class="btn btn--primary btn--lg">
+            Get a Free Quote
+          </a>
+          <a href="/services.html" class="btn btn--secondary btn--lg">
+            View Our Services
+          </a>
         </div>
         <div class="hero__trust-bar">
           <p class="text-muted" style="color: rgba(255,255,255,0.7);">Trusted by 900+ Australian businesses across 7 service areas</p>
         </div>
       </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+          <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+        </svg>
+      </div>
     </section>
-
-    <!-- Wave Divider: Dark → White -->
-    <div class="wave-divider wave-divider--white">
-      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/>
-      </svg>
-    </div>
 
     <!-- Services (White) -->
     <section class="section" style="background-color: var(--color-white);">
@@ -102,9 +52,9 @@
           <h2>Services That <span class="gradient-text">Drive Growth</span></h2>
           <p class="text-muted">We don't just build websites — we build marketing machines that attract, convert, and retain customers.</p>
         </div>
-        <div class="animate-stagger" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div class="services-grid animate-stagger">
           <a href="/website-design.html" class="service-card">
-            <div class="service-card__icon">
+            <div class="service-card__icon" aria-hidden="true">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
@@ -113,15 +63,15 @@
             </div>
             <h3 class="service-card__title">Website Design</h3>
             <p class="service-card__desc">Conversion‑focused websites that look stunning and work harder. Built with SEO, speed, and user experience at the core.</p>
-            <div class="service-card__arrow">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+            <span class="service-card__link">
+              Learn more
+              <svg class="service-card__arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </div>
+            </span>
           </a>
           <a href="/seo.html" class="service-card">
-            <div class="service-card__icon">
+            <div class="service-card__icon" aria-hidden="true">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -130,15 +80,15 @@
             </div>
             <h3 class="service-card__title">SEO</h3>
             <p class="service-card__desc">Long‑term organic growth with technical SEO, content strategy, and local search dominance. Rank higher, attract more leads.</p>
-            <div class="service-card__arrow">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+            <span class="service-card__link">
+              Learn more
+              <svg class="service-card__arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </div>
+            </span>
           </a>
           <a href="/google-ads.html" class="service-card">
-            <div class="service-card__icon">
+            <div class="service-card__icon" aria-hidden="true">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
@@ -146,13 +96,45 @@
             </div>
             <h3 class="service-card__title">Google Ads</h3>
             <p class="service-card__desc">Precisely targeted pay‑per‑click campaigns that deliver immediate, high‑intent traffic. Only pay for results.</p>
-            <div class="service-card__arrow">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+            <span class="service-card__link">
+              Learn more
+              <svg class="service-card__arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </div>
+            </span>
           </a>
+          <div class="services-grid__last-row">
+            <a href="/social-media-advertising.html" class="service-card">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Social Media Advertising</h3>
+              <p class="service-card__desc">Facebook and Instagram campaigns that put your business in front of the right audience before they even start searching.</p>
+              <span class="service-card__link">
+                Learn more
+                <svg class="service-card__arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+            <a href="/full-digital-marketing.html" class="service-card">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Full Digital Marketing</h3>
+              <p class="service-card__desc">Website, SEO, Google Ads, and social — one team handling your entire digital presence. Consistent strategy, zero coordination overhead.</p>
+              <span class="service-card__link">
+                Learn more
+                <svg class="service-card__arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
         <div class="text-center mt-12">
           <a href="/services.html" class="btn btn--primary">View All Services</a>
@@ -161,8 +143,8 @@
     </section>
 
     <!-- Wave Divider: White → Light -->
-    <div class="wave-divider wave-divider--light">
-      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor">
+    <div class="wave-divider wave-divider--light" style="background-color: #ffffff;">
+      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor" style="display:block;">
         <path d="M0,0 C240,80 480,80 720,40 C960,0 1200,0 1440,60 L1440,80 L0,80 Z"/>
       </svg>
     </div>
@@ -185,8 +167,8 @@
     </section>
 
     <!-- Wave Divider: Light → Dark -->
-    <div class="wave-divider wave-divider--dark">
-      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor">
+    <div class="wave-divider wave-divider--dark" style="background-color: #f8fafc;">
+      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor" style="display:block;">
         <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1350,20 1440,40 L1440,80 L0,80 Z"/>
       </svg>
     </div>
@@ -194,29 +176,30 @@
     <!-- Stats (Dark with Texture) -->
     <section class="section section--textured" style="background-color: var(--color-secondary); color: white;">
       <div class="container">
-        <div class="stats-bar">
+        <div class="stats-bar animate-stagger">
           <div class="stat-item">
-            <span class="stat-number" data-target="15" data-suffix="+">0+</span>
-            <span class="stat-item__label">Years Experience</span>
+            <span class="stat-number" data-target="900" data-suffix="+">0</span>
+            <span class="stat-label">Websites Built</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number" data-target="1800" data-suffix="+">0+</span>
-            <span class="stat-item__label">Happy Clients</span>
+            <span class="stat-number" data-target="15" data-suffix="+">0</span>
+            <span class="stat-label">Years Experience</span>
           </div>
-          <div class="stat-number" data-target="12750" data-suffix="+">0+</span>
-            <span class="stat-item__label">Projects Delivered</span>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5.0" data-suffix="★" data-decimals="1">0</span>
+            <span class="stat-label">Google Rating</span>
           </div>
           <div class="stat-item">
             <span class="stat-number" data-target="7" data-suffix="">0</span>
-            <span class="stat-item__label">Service Areas</span>
+            <span class="stat-label">Cities Serviced</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Wave Divider: Dark → White (Top) -->
-    <div class="wave-divider wave-divider--top wave-divider--white">
-      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor">
+    <div class="wave-divider wave-divider--top wave-divider--white" style="background-color: #0B1728;">
+      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor" style="display:block;">
         <path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z"/>
       </svg>
     </div>
@@ -228,7 +211,7 @@
           <h2>Why Choose <span class="gradient-text">Spot On</span>?</h2>
           <p class="text-muted">We're not just another agency. Here's what sets us apart.</p>
         </div>
-        <div class="animate-stagger" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div class="why-us-grid animate-stagger">
           <div class="why-card">
             <div class="why-card__icon">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -261,13 +244,55 @@
             <h3 class="why-card__title">Australian Team</h3>
             <p>You'll work directly with our local team based on the Gold Coast. Real people, real expertise, real accountability.</p>
           </div>
+          <div class="why-card">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3 class="why-card__title">Results You Can Measure</h3>
+            <p>Every campaign we run comes with clear reporting. You'll always know what's working, what's not, and exactly what your investment is returning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies (White) -->
+    <section class="section case-studies-section" aria-labelledby="cases-heading">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__label">Real Results</span>
+          <h2 id="cases-heading" class="section__heading">
+            What happens when your website <span class="gradient-text">actually works</span>
+          </h2>
+        </div>
+        <div class="case-studies-grid animate-stagger">
+
+          <div class="case-study-card">
+            <div class="case-study-card__label">Complete Digital Overhaul</div>
+            <h3 class="case-study-card__title">Irresistible Force</h3>
+            <p class="case-study-card__body">7-year client relationship covering every aspect of their digital presence — website, SEO, and ongoing marketing strategy across the full business lifecycle.</p>
+          </div>
+
+          <div class="case-study-card">
+            <div class="case-study-card__label">Website &amp; Business Transformation</div>
+            <h3 class="case-study-card__title">BinPro Property Services</h3>
+            <p class="case-study-card__body">From cleaning 5–10 bins a day at $25 each to booked out 3 months in advance charging $800+ per service. Same business, completely different results.</p>
+          </div>
+
+          <div class="case-study-card">
+            <div class="case-study-card__label">New Business Launch</div>
+            <h3 class="case-study-card__title">Northern Purpose</h3>
+            <p class="case-study-card__body">Took a business from concept to launch with a full website build, ongoing marketing support, and an SEO strategy that drove organic growth from day one.</p>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- Wave Divider: White → Primary -->
-    <div class="wave-divider wave-divider--primary">
-      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor">
+    <div class="wave-divider wave-divider--primary" style="background-color: #ffffff;">
+      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor" style="display:block;">
         <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/>
       </svg>
     </div>
@@ -282,8 +307,8 @@
     </section>
 
     <!-- Wave Divider: Primary → Light -->
-    <div class="wave-divider wave-divider--light">
-      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor">
+    <div class="wave-divider wave-divider--light" style="background-color: var(--color-primary);">
+      <svg preserveAspectRatio="none" viewBox="0 0 1440 80" fill="currentColor" style="display:block;">
         <path d="M0,0 C240,80 480,80 720,40 C960,0 1200,0 1440,60 L1440,80 L0,80 Z"/>
       </svg>
     </div>
@@ -328,74 +353,8 @@
       </div>
     </section>
   </main>
+  <div id="footer-placeholder"></div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 48px;">
-        <!-- Column 1: Brand -->
-        <div>
-          <img src="https://spotonwebsites.com.au/wp-content/uploads/2025/10/Spot-On-LeadFlow-3.png" alt="Spot On Websites" class="footer__logo" width="160" height="40">
-          <p class="footer__tagline">Australian digital marketing agency building websites that actually generate leads for service businesses.</p>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            <span>hello@spotonwebsites.com.au</span>
-          </div>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-            </svg>
-            <span>(07) 5607 1263</span>
-          </div>
-          <div class="footer__contact-item">
-            <svg class="footer__contact-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-            </svg>
-            <span>Shop 6001/19 Robina Town Centre Drive, Robina QLD 4226</span>
-          </div>
-        </div>
-
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h3 class="footer__heading">Services</h3>
-          <a href="/website-design.html" class="footer__link">Website Design</a>
-          <a href="/seo.html" class="footer__link">SEO</a>
-          <a href="/google-ads.html" class="footer__link">Google Ads</a>
-          <a href="/social-media-advertising.html" class="footer__link">Social Media Advertising</a>
-          <a href="/full-digital-marketing.html" class="footer__link">Full Digital Marketing</a>
-        </div>
-
-        <!-- Column 3: Service Areas -->
-        <div>
-          <h3 class="footer__heading">Service Areas</h3>
-          <a href="/gold-coast.html" class="footer__link">Gold Coast</a>
-          <a href="/brisbane.html" class="footer__link">Brisbane</a>
-          <a href="/sunshine-coast.html" class="footer__link">Sunshine Coast</a>
-          <a href="/sydney.html" class="footer__link">Sydney</a>
-          <a href="/melbourne.html" class="footer__link">Melbourne</a>
-          <a href="/perth.html" class="footer__link">Perth</a>
-          <a href="/adelaide.html" class="footer__link">Adelaide</a>
-        </div>
-
-        <!-- Column 4: Company -->
-        <div>
-          <h3 class="footer__heading">Company</h3>
-          <a href="/about.html" class="footer__link">About Us</a>
-          <a href="/services.html" class="footer__link">All Services</a>
-          <a href="/contact.html" class="footer__link">Contact</a>
-          <a href="/privacy.html" class="footer__link">Privacy Policy</a>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <p>&copy; 2010–2026 Spot On Websites. All rights reserved. ABN 123 456 789.</p>
-        <p>Website built by Spot On Websites — an Australian digital marketing agency.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/assets/script.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 /* Super Builder — Spot On Websites
-   Interactive Behaviours v1.0
-   Generated: 2026-03-22 */
+   Interactive Behaviours v1.1 */
 
 (function() {
   'use strict';
@@ -9,16 +8,64 @@
   // DOM Ready
   // ==========================================================================
   document.addEventListener('DOMContentLoaded', function() {
-    initMobileDrawer();
-    initScrollHeader();
+    loadIncludes(); // must be first — injects header + footer, then wires up nav
     initScrollAnimations();
     initCounters();
-    initWaveDividers();
     initServiceCardHovers();
-    initFormValidation();
     initSmoothScroll();
+    initCallBar();
+    initContactForm();
+    initFaq();
     console.log('✅ Super Builder JS initialised');
   });
+
+  // ==========================================================================
+  // Include Loader — fetches header.html and footer.html and injects them
+  // ==========================================================================
+  async function loadIncludes() {
+    try {
+      const headerRes = await fetch('includes/header.html');
+      if (headerRes.ok) {
+        const headerHtml = await headerRes.text();
+        const headerEl = document.getElementById('header-placeholder');
+        if (headerEl) {
+          headerEl.innerHTML = headerHtml;
+          initNav();
+          setActiveNavLink();
+        }
+      }
+
+      const footerRes = await fetch('includes/footer.html');
+      if (footerRes.ok) {
+        const footerHtml = await footerRes.text();
+        const footerEl = document.getElementById('footer-placeholder');
+        if (footerEl) footerEl.innerHTML = footerHtml;
+      }
+    } catch (err) {
+      console.error('Include load error:', err);
+    }
+  }
+
+  // ==========================================================================
+  // Nav — runs after header is injected
+  // ==========================================================================
+  function initNav() {
+    initMobileDrawer();
+    initScrollHeader();
+  }
+
+  function setActiveNavLink() {
+    const path = window.location.pathname;
+    const filename = path.split('/').pop() || 'index.html';
+    document.querySelectorAll('.header__nav-link').forEach(function(link) {
+      const href = link.getAttribute('href');
+      if (href === filename ||
+          (filename === '' && href === 'index.html') ||
+          (filename === 'index.html' && href === 'index.html')) {
+        link.classList.add('active');
+      }
+    });
+  }
 
   // ==========================================================================
   // Mobile Drawer Navigation
@@ -116,6 +163,32 @@
   // ==========================================================================
   // Counter Animation (Stats Bar)
   // ==========================================================================
+  function animateCounter(el) {
+    const target = parseFloat(el.dataset.target);
+    if (isNaN(target) || target === 0) {
+      el.textContent = el.dataset.target + (el.dataset.suffix || '');
+      return;
+    }
+    const suffix = el.dataset.suffix || '';
+    const decimals = parseInt(el.dataset.decimals) || 0;
+    const duration = 1800;
+    const startTime = performance.now();
+
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = target * eased;
+      el.textContent = value.toFixed(decimals) + (progress === 1 ? suffix : '');
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
   function initCounters() {
     const statElements = document.querySelectorAll('.stat-number');
     if (statElements.length === 0) return;
@@ -132,52 +205,13 @@
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           observer.unobserve(entry.target);
-
-          const el = entry.target;
-          const target = parseFloat(el.dataset.target);
-          const suffix = el.dataset.suffix || '';
-          const decimals = parseInt(el.dataset.decimals) || 0;
-          const duration = 1800;
-          const startTime = performance.now();
-
-          function update(now) {
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const value = target * eased;
-            el.textContent = value.toFixed(decimals) + (progress === 1 ? suffix : '');
-
-            if (progress < 1) {
-              requestAnimationFrame(update);
-            }
-          }
-
-          requestAnimationFrame(update);
+          animateCounter(entry.target);
         });
       },
       { threshold: 0.5 }
     );
 
     statElements.forEach((el) => observer.observe(el));
-  }
-
-  // ==========================================================================
-  // Wave Dividers (Ensure they fill width)
-  // ==========================================================================
-  function initWaveDividers() {
-    // Ensure wave SVGs scale correctly on resize
-    function resizeWaves() {
-      document.querySelectorAll('.wave-divider svg').forEach((svg) => {
-        const width = svg.parentElement.offsetWidth;
-        const height = svg.parentElement.offsetHeight;
-        svg.setAttribute('width', width);
-        svg.setAttribute('height', height);
-        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-      });
-    }
-
-    window.addEventListener('resize', resizeWaves);
-    resizeWaves(); // initial
   }
 
   // ==========================================================================
@@ -241,6 +275,40 @@
           top: target.offsetTop - 80,
           behavior: 'smooth'
         });
+      });
+    });
+  }
+
+  // ==========================================================================
+  // Mobile Call Bar
+  // ==========================================================================
+  function initCallBar() {
+    const bar = document.querySelector('.call-bar');
+    if (!bar) return;
+    const dismiss = bar.querySelector('.call-bar__dismiss');
+    if (dismiss) {
+      dismiss.addEventListener('click', function() {
+        bar.style.display = 'none';
+      });
+    }
+  }
+
+  // ==========================================================================
+  // Contact Form (alias for form validation)
+  // ==========================================================================
+  function initContactForm() {
+    initFormValidation();
+  }
+
+  // ==========================================================================
+  // FAQ Accordion
+  // ==========================================================================
+  function initFaq() {
+    document.querySelectorAll('.faq__question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = btn.closest('.faq__item');
+        if (!item) return;
+        item.classList.toggle('faq__item--open');
       });
     });
   }
